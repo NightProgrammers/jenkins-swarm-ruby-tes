@@ -1,0 +1,11 @@
+sudo: required
+services: docker
+script:
+  - docker build -t $REPO:$(cat version) .
+  - docker tag $REPO:$(cat version) $REPO:latest
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login -u="$REGISTRY_USERNAME" -p="$REGISTRY_PASSWORD" $REGISTRY;
+      docker push $REPO:$(cat version);
+      docker push $REPO:latest;
+    fi
