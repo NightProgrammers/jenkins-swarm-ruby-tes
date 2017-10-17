@@ -3,9 +3,9 @@
 **默认的启动入口是 java -jar /usr/share/jenkins/swarm-client.jar`**
 
 Ruby: `2.4.1`
-Java: `8u131-b11-2`
+Java: `8u141-b15-1`
 ca-certificates-java: `20170531+nmu1`
-swarm-client: `3.4`
+swarm-client: `3.5`
 tes-request: `0.8`
 
 ## 参数格式:
