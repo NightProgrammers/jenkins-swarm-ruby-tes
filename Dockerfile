@@ -2,8 +2,8 @@ FROM wuhuizuo/ruby-tes:v0.9
 MAINTAINER Wuhui Zuo <wuhuizuo@126.com>
 
 ### install openjdk-8-jre-headless
-ENV JAVA_VERSION 8u141
-ENV JAVA_DEBIAN_VERSION 8u141-b15-1~deb9u1
+ENV JAVA_VERSION 8u151
+ENV JAVA_DEBIAN_VERSION 8u151-b12-1~deb9u1
 ENV CA_CERTIFICATES_JAVA_VERSION 20170531+nmu1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
