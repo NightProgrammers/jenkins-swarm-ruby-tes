@@ -6,7 +6,7 @@ Ruby: `2.4.1`
 Java: `8u141-b15-1`
 ca-certificates-java: `20170531+nmu1`
 swarm-client: `3.5`
-tes-request: `0.8`
+tes-request: `0.9`
 
 ## 参数格式:
 
