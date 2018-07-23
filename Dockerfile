@@ -2,10 +2,9 @@ FROM wuhuizuo/ruby-tes:v0.9
 MAINTAINER Wuhui Zuo <wuhuizuo@126.com>
 
 ### install openjdk-8-jre-headless
-ENV JAVA_VERSION 8u151
-ENV JAVA_DEBIAN_VERSION 8u151-b12-1~deb9u1
+ENV JAVA_VERSION 8u171
+ENV JAVA_DEBIAN_VERSION 8u171-b11-1~deb9u1
 ENV CA_CERTIFICATES_JAVA_VERSION 20170531+nmu1
-
 RUN apt-get update && apt-get install -y --no-install-recommends \
         openjdk-8-jre-headless="$JAVA_DEBIAN_VERSION" \
         ca-certificates-java="$CA_CERTIFICATES_JAVA_VERSION" \
@@ -17,8 +16,9 @@ RUN /var/lib/dpkg/info/ca-certificates-java.postinst configure
 ###
 
 ### install jenkins-slave
+ENV JENKINS_SWARM_VERSION 3.5
 RUN curl --create-dirs -sSLo /usr/share/jenkins/swarm-client.jar \
-  http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/3.5/swarm-client-3.5.jar \
+  http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/${JENKINS_SWARM_VERSION}/swarm-client-${JENKINS_SWARM_VERSION}.jar \
   && chmod 755 /usr/share/jenkins \
   && chmod 644 /usr/share/jenkins/swarm-client.jar
 ###
