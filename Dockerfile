@@ -1,4 +1,4 @@
-FROM wuhuizuo/ruby-tes:v0.9
+FROM wuhuizuo/ruby-tes:v0.11
 MAINTAINER Wuhui Zuo <wuhuizuo@126.com>
 
 ### install openjdk-8-jre-headless
